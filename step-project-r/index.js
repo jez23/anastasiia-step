@@ -20,11 +20,17 @@ let startIndex = 0;
 prevBtn.addEventListener("click", () => {
   if (startIndex > 0) {
     leftOrRight("left");
+  } else{
+    startIndex = clientItems.length -2;
+    leftOrRight("right");
   }
 });
 
 nextBtn.addEventListener("click", () => {
   if (startIndex < clientItems.length - 1) {
+    leftOrRight("right");
+  } else{
+    startIndex = -1;
     leftOrRight("right");
   }
 });
