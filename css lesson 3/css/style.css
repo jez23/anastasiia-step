@@ -1,0 +1,40 @@
+/* a {
+  color: blueviolet;
+} */
+
+.header-wrap {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #f1b128;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  display: inline-block;
+}
+
+.header-menu {
+  display: inline-block;
+  text-align: center;
+}
+.menu-list a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-item.active a {
+  color: #f1b128;
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 0 35px;
+}
+.header-left {
+  display: inline-block;
+}
+.header-right {
+  margin-left: 14%;
+  display: inline-block;
+}

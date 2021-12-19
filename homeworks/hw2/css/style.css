@@ -1,0 +1,79 @@
+body {
+  margin: 0; /* сброс настроек к рамкам фото*/
+}
+
+.header {
+  display: flex; /* погуглить  */
+  justify-content: center;
+}
+
+.navbar-list {
+  padding-left: 0;
+}
+/* сброс настроек к списку навиагции */
+
+.menu-item {
+  display: inline-block;
+  padding: 0 36px;
+}
+
+.menu-item a {
+  color: #ff0000;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.content-image {
+  height: 100vh; /* высота будет равна высоте твоего девайса     */
+}
+
+.main-photo {
+  object-fit: cover; /* как должно заполнять пространство, то есть фото не будет наиболее адаптировано, не будет разстягиваться  */
+  height: 100%; /* помогает занять картинке всю площадь блока  */
+  width: 100%;
+}
+
+.content-text {
+  text-align: center;
+  margin: 0 auto; /* задает центр блочным элементам */
+  max-width: 1145px; /* max ширина текста с дизайна */
+  padding: 0 16px; /* если свернуть на мобильный экран тогда текст не будет прилипать к стенкам */
+  font-family: sans-serif;
+}
+
+.title {
+  margin-top: 49px;
+  margin-bottom: 38px;
+  font-size: 22px;
+}
+
+.first-text {
+  margin-bottom: 28px;
+  font-size: 16px;
+}
+
+.second-text {
+  margin-bottom: 60px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.btn-wrap {
+  margin: 0 auto 42px; /* 42px нижний margin */
+  display: block; /* выставить кнопку по центру, применяется только к блочному элементу, поэтому указываем display:block*/
+  border: none; /* сброс настроек кнопки, но нужно смотреть поскольку может быть больше настроеек браузера по дефолту */
+  font-size: 22px;
+  background: #ff0000;
+  color: white;
+  border-radius: 4px;
+  width: 191px;
+  height: 51px;
+}
+
+.privacy-text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-align: right;
+  padding: 40px 105px 21px 16px;
+  font-size: 22px;
+}
