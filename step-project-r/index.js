@@ -30,33 +30,32 @@ nextBtn.addEventListener("click", () => {
 });
 
 clientItems.forEach((image, index) => {
-  image.addEventListener('click', (e) => {
+  image.addEventListener("click", (e) => {
     leftOrRight(e.target.classList[1], index);
-  })
-})
+  });
+});
 
 const leftOrRight = (directionOrName, index) => {
-
-  if(directionOrName === "left"){
+  if (directionOrName === "left") {
     startIndex--;
-  } else if (directionOrName === "right"){
+  } else if (directionOrName === "right") {
     startIndex++;
-  } else{
+  } else {
     startIndex = index;
   }
 
   let imageArray = Array.from(clientItems);
 
   const peopleArray = { anna, artem, hasan, olga };
-  let active ;
+  let active;
 
   for (const person in peopleArray) {
     peopleArray[person].classList.remove("active");
   }
 
-  if(directionOrName !== "left" && directionOrName !== "right"){
+  if (directionOrName !== "left" && directionOrName !== "right") {
     active = peopleArray[directionOrName];
-  } else{
+  } else {
     active = peopleArray[imageArray[startIndex].classList[1]];
   }
 
@@ -67,7 +66,6 @@ const leftOrRight = (directionOrName, index) => {
   });
 
   active.classList.add("active");
-
 };
 
 // ##############OUR AMAZING WORK####################
