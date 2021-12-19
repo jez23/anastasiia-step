@@ -29,10 +29,36 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-const leftOrRight = (direction) => {
-  direction === "left" ? startIndex-- : startIndex++;
+clientItems.forEach((image, index) => {
+  image.addEventListener('click', (e) => {
+    leftOrRight(e.target.classList[1], index);
+  })
+})
+
+const leftOrRight = (directionOrName, index) => {
+
+  if(directionOrName === "left"){
+    startIndex--;
+  } else if (directionOrName === "right"){
+    startIndex++;
+  } else{
+    startIndex = index;
+  }
 
   let imageArray = Array.from(clientItems);
+
+  const peopleArray = { anna, artem, hasan, olga };
+  let active ;
+
+  for (const person in peopleArray) {
+    peopleArray[person].classList.remove("active");
+  }
+
+  if(directionOrName !== "left" && directionOrName !== "right"){
+    active = peopleArray[directionOrName];
+  } else{
+    active = peopleArray[imageArray[startIndex].classList[1]];
+  }
 
   imageArray.forEach((photo, index) => {
     index === startIndex
@@ -40,14 +66,8 @@ const leftOrRight = (direction) => {
       : photo.classList.remove("active");
   });
 
-  const peopleArray = { anna, artem, hasan, olga };
-
-  for (const person in peopleArray) {
-    peopleArray[person].classList.remove("active");
-  }
-
-  const active = peopleArray[imageArray[startIndex].classList[1]];
   active.classList.add("active");
+
 };
 
 // ##############OUR AMAZING WORK####################

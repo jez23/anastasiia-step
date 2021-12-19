@@ -648,6 +648,9 @@ body {
   margin-top: 6%;
   /* margin-left: 5%; */
 }
+.img-people:hover{
+  cursor: pointer;
+}
 .title-gallery {
   margin-top: 108px;
   color: rgba(78, 78, 78, 1);
